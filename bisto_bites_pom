@@ -1,0 +1,115 @@
+package pojoclass;
+
+import org.baseclass.baseclass;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class pojoclass_bb extends baseclass{
+	
+	public pojoclass_bb() {
+		
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(xpath="(//li[@class='lte-nav-profile '])[2]")
+	private WebElement account;
+	
+	@FindBy(xpath="//input[@id='name']")
+	private WebElement name;
+	
+	@FindBy(xpath="//input[@id='email']")
+	private WebElement email;
+	
+	@FindBy(xpath="(//input[@id='phone'])[2]")
+	private WebElement phone;
+	
+	@FindBy(xpath="//input[@id='password_reg']")
+	private WebElement password;
+	
+	@FindBy(xpath="//input[@id='con_password_reg']")
+	private WebElement con_password;
+	
+	@FindBy(xpath="(//button[@name='login'])[2]")
+	private WebElement submit;
+
+	public WebElement getAccount() {
+		return account;
+	}
+
+	public WebElement getName() {
+		return name;
+	}
+
+	public WebElement getEmail() {
+		return email;
+	}
+
+	public WebElement getPhone() {
+		return phone;
+	}
+
+	public WebElement getPassword() {
+		return password;
+	}
+
+	public WebElement getCon_password() {
+		return con_password;
+	}
+
+	public WebElement getSubmit() {
+		return submit;
+	}
+	@FindBy(xpath="//li[@id='menu-item-623']")
+	private WebElement menu;
+	
+	@FindBy(xpath="//h2[text()='Masala Dosa']")
+	private WebElement masaladosa;
+	
+	@FindBy(xpath="(//span[text()='Available at 08:00 AM'])[1]")
+	private WebElement time;
+
+	public WebElement getmenu() {
+		return menu;
+	}
+
+	public WebElement getMasaladosa() {
+		return masaladosa;
+	}
+
+	public WebElement getTime() {
+		return time;
+	}
+	
+	@FindBy(xpath="//input[@class='search-field']")
+	private WebElement searchbutton;
+	
+	@FindBy(xpath="(//span[@class='woocommerce-Price-amount amount'])[2]")
+	private WebElement cokeprice;
+
+	public WebElement getSearchbutton() {
+		return searchbutton;
+	}
+	public WebElement getCokeprice() {
+		return cokeprice;
+	}
+	@FindBy(xpath="//p[text()='Showing all 1 results']")
+	private WebElement result;
+	
+	@FindBy(xpath="//span[@class='woocommerce-Price-amount amount']")
+	private WebElement price;
+
+	public WebElement getResult() {
+		return result;
+	}
+
+	public WebElement getPrice() {
+		return price;
+	}
+	
+	@FindBy(xpath="//li[@id='menu-item-3557']")
+	private WebElement ourstory;
+
+	public WebElement getOurstory() {
+		return ourstory;
+	}	
+}
